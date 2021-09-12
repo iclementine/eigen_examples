@@ -13,7 +13,8 @@ int main(int argc, char** argv) {
     // auto sum = t1 + t2;
     // std::cout << sum(0, 0) << std::endl;
     
-    // 但是 TensorRef 可以对 Operation 进行包装
+    // 但是 TensorRef 可以对 Operation 进行包装，这样子就可以避免算出完整的结果，
+    // 你可以按需计算
     Eigen::TensorRef<Eigen::Tensor<float, 2>> sum = t1 + t2;
     std::cout << sum(0, 0) << std::endl;
     

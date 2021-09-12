@@ -1,14 +1,7 @@
-cmake_minimum_required(VERSION 3.0)
-
+cmake_minimum_required(VERSION 3.10)
 project(basic_concepts)
 
-
-set(CMAKE_CXX_FLAGS "-std=c++14")
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
-
 add_executable(layout layout.cpp)
-# 原来这是所谓的接口库，尽管它只是包含头文件，但是你可以这么写，
-# 而不是显示指定头文件
 target_link_libraries (layout Eigen3::Eigen)
 
 
@@ -21,4 +14,8 @@ target_link_libraries (contraction Eigen3::Eigen)
 add_executable(init init.cpp)
 target_link_libraries (init Eigen3::Eigen)
 
-install(TARGETS layout tensorref init contraction RUNTIME DESTINATION bin)
+add_executable(representation representation.cpp)
+target_link_libraries (representation Eigen3::Eigen)
+
+add_executable(slice slice.cc)
+target_link_libraries (slice Eigen3::Eigen)
