@@ -1,7 +1,7 @@
 #include <iostream>
 #include <Eigen/Dense>
 
-int advanced_init(){
+void advanced_init(){
 	Eigen::MatrixXd M(4, 4);
 	Eigen::Matrix2d N1;
 	N1 << 2, 3, 4, 5;
