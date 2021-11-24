@@ -20,5 +20,13 @@ target_link_libraries (representation Eigen3::Eigen)
 add_executable(slice slice.cc)
 target_link_libraries (slice Eigen3::Eigen)
 
+
 add_executable(reduction reduction.cpp)
 target_link_libraries (reduction Eigen3::Eigen)
+
+add_executable(test_cast test_cast.cc)
+target_link_libraries (test_cast Eigen3::Eigen)
+
+add_executable(broadcast broadcast.cc)
+target_link_libraries (broadcast Eigen3::Eigen)
+
