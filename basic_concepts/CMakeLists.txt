@@ -30,3 +30,5 @@ target_link_libraries (test_cast Eigen3::Eigen)
 add_executable(broadcast broadcast.cc)
 target_link_libraries (broadcast Eigen3::Eigen)
 
+add_executable(complex complex.cpp)
+target_link_libraries (complex Eigen3::Eigen)
