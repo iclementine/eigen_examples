@@ -21,5 +21,13 @@ int main(){
     
     std::cout << "magitude:\n" << r << std::endl;
     std::cout << "angle:\n" << theta << std::endl;
+
+    auto recover = r.binaryExpr(
+        theta,
+        [](auto r, auto theta){
+            return std::polar(r, theta);
+        }
+    );
+    std::cout << "revover a:\n" << recover << std::endl;
     return 0;
 }
