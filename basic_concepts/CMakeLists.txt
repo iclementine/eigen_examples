@@ -32,3 +32,6 @@ target_link_libraries (broadcast Eigen3::Eigen)
 
 add_executable(complex complex.cpp)
 target_link_libraries (complex Eigen3::Eigen)
+
+add_executable(function function.cc)
+target_link_libraries (function Eigen3::Eigen)
